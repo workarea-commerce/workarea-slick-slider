@@ -1,0 +1,48 @@
+#slick-slider.style-guide__subsection
+
+  %h3= link_to_style_guide('components', 'slick_slider')
+
+  %p Displays a set of images as a slider
+  %p
+    Use
+    = link_to 'Ken Wheeler\'s Slick', 'http://kenwheeler.github.io/slick/'
+    to see additional options
+
+  %p Default Slider Options:
+
+  .style-guide__example-block
+
+    .slick-slider{ data: { slick_slider: '' } }
+
+      - (1..4).each do |i|
+        .slick-slider__image-wrapper= image_tag('workarea/storefront/style_guide_light_banner.png', alt: "Image #{i}", class: 'slick-slider__image')
+
+
+  %p Custom Slider Options added inside of helper:
+
+  .style-guide__example-block
+
+    .slick-slider{ data: { slick_slider: style_guide_slider_options } }
+
+      - (1..8).each do |i|
+        .slick-slider__image-wrapper= image_tag('workarea/storefront/style_guide_product.jpg', alt: "Image #{i}", class: 'slick-slider__image')
+
+
+  %p Slider Options with Stop Autoplay on Interaction (click or slide):
+
+  .style-guide__example-block
+
+    .slick-slider{ data: { slick_slider: style_guide_autoplay_stop_options } }
+
+      - (1..4).each do |i|
+        .slick-slider__image-wrapper= image_tag('workarea/storefront/style_guide_light_banner.png', alt: "Image #{i}", class: 'slick-slider__image')
+
+
+  %p Custom Slider That Waits for Images
+
+  .style-guide__example-block
+
+    .slick-slider{ data: { slick_slider: style_guide_slider_wait_for_images } }
+
+      - (1..4).each do |i|
+        .slick-slider__image-wrapper= image_tag('workarea/storefront/style_guide_light_banner.png', alt: "Image #{i}", class: 'slick-slider__image')
