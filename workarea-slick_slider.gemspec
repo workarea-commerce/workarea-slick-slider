@@ -13,7 +13,9 @@ Gem::Specification.new do |s|
   s.summary     = "You have a bunch of images that require rotating."
   s.description = "Simple rotating feature adding a data attribute and Ruby methods for customization."
   s.files = `git ls-files`.split("\n")
+  s.license = 'Business Software License'
   # s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  # s.license = 'Business Software License'
 
   s.required_ruby_version = '>= 2.3.0'
 
