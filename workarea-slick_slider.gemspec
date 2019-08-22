@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Workarea::SlickSlider::VERSION
   s.authors     = ["Ivana Veliskova"]
   s.email       = ["iveliskova@weblinc.com"]
-  s.homepage    = 'https://stash.tools.workarea.com/projects/WP/repos/workarea-slick-slider'
+  s.homepage    = 'https://github.com/workarea-commerce/workarea-slick_slider'
   s.summary     = "You have a bunch of images that require rotating."
   s.description = "Simple rotating feature adding a data attribute and Ruby methods for customization."
   s.files = `git ls-files`.split("\n")
