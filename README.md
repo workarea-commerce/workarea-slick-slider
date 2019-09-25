@@ -1,4 +1,5 @@
-# Workarea Slick Slider
+Workarea Slick Slider
+================================================================================
 
 Slick Slider plugin for the Workarea platform.
 
@@ -16,13 +17,33 @@ Example markup using haml:
   = image_tag url_to_image('workarea/storefront/path/to/image.jpg'), alt: t('workarea.storefront.example.alt_text_4')
 ```
 
-## Using Workarea Slick Slider
+Getting Started
+--------------------------------------------------------------------------------
+
+Add the gem to your application's Gemfile:
+
+```ruby
+# ...
+gem 'workarea-slick_slider'
+# ...
+```
+
+Update your application's bundle.
+
+```bash
+cd path/to/application
+bundle
+```
+
+Usage
+--------------------------------------------------------------------------------
 
 Apply a `data-slick-slider` attribute to any element that is meant to become a
 slider. If no value is passed to the data attribute, then the default
 `Workarea.config.slickSlider` options will be used to init the accordion.
 
-### Modifying Options
+Options
+--------------------------------------------------------------------------------
 
 Options can be passed in to the `WORKAREA.slickSlider` module by providing a
 JSON object as the value for `data-slick-slider`. If these objects become large
@@ -149,7 +170,8 @@ _.merge(WORKAREA.config.slickSlider, {
 });
 ```
 
-## Analytics Tracking
+Analytics Tracking
+--------------------------------------------------------------------------------
 
 Slider Analytics gets initialized on slider init. There are 4 different types of
 events that get tracked:
@@ -219,7 +241,8 @@ When a user drags or swipes (on mobile) a slide, a few things are tracked:
 5. Click Target (navigation dots)
   This is tracked to note that the dots were targeted
 
-## Gotchas
+Gotchas
+--------------------------------------------------------------------------------
 
 ### Using Mobile First
 
@@ -239,46 +262,12 @@ to be repeated if they will continue to the next breakpoint as seen in the
 "Modifying Options" example where arrows and dots needs to be repeated for it to
 show correctly in the `wide` breakpoint.
 
-## Getting Started
+Workarea Commerce Documentation
+--------------------------------------------------------------------------------
 
-This gem contains a rails engine that must be mounted onto a host Rails
-application.
+See [https://developer.workarea.com](https://developer.workarea.com) for Workarea Commerce documentation.
 
-You must have access to a Workarea gems server to use this gem. Add your gems
-server credentials to Bundler:
+License
+--------------------------------------------------------------------------------
 
-    bundle config gems.weblinc.com my_username:my_password
-
-Or set the appropriate environment variable in a shell startup file:
-
-    export BUNDLE_GEMS__WEBLINC__COM='my_username:my_password'
-
-Then add the gem to your application's Gemfile specifying the source:
-
-    # ...
-    gem 'workarea-slick_slider', source: 'https://gems.weblinc.com'
-    # ...
-
-Or use a source block:
-
-    # ...
-    source 'https://gems.weblinc.com' do
-      gem 'workarea-slick_slider'
-    end
-    # ...
-
-Update your application's bundle.
-
-    cd path/to/application
-    bundle
-
-## Workarea Platform Documentation
-
-See [http://developer.weblinc.com](http://developer.weblinc.com) for Workarea
-platform documentation.
-
-## Copyright & Licensing
-
-Copyright WebLinc 2017. All rights reserved.
-
-For licensing, contact sales@workarea.com.
+Workarea Slick Slider is released under the [Business Software License](LICENSE)
