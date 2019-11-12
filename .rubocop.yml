@@ -1,8 +1,2 @@
-inherit_gem:
-  workarea-ci: rubocop.yml
-
-AllCops:
-  Exclude:
-    - 'test/dummy/**/*'
-    - 'lib/workarea/slick_slider.rb'
-    - 'lib/workarea/slick_slider/**/*'
+inherit_from:
+  - https://raw.githubusercontent.com/workarea-commerce/workarea/master/.rubocop.yml
