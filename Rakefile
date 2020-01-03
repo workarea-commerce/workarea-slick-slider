@@ -37,13 +37,12 @@ desc "Release version #{Workarea::SlickSlider::VERSION} of the gem"
 task :release do
   host = "https://#{ENV['BUNDLE_GEMS__WEBLINC__COM']}@gems.weblinc.com"
 
-  #Rake::Task['workarea:changelog'].execute
-  #system 'git add CHANGELOG.md'
-  #system 'git commit -m "Update CHANGELOG"'
-  #system 'git push origin HEAD'
+  Rake::Task['workarea:changelog'].execute
+  system 'git add CHANGELOG.md'
+  system 'git commit -m "Update CHANGELOG"'
 
   system "git tag -a v#{Workarea::SlickSlider::VERSION} -m 'Tagging #{Workarea::SlickSlider::VERSION}'"
-  system 'git push --tags'
+  system 'git push origin HEAD --follow-tags'
 
   system "gem build workarea-slick_slider.gemspec"
   system "gem push workarea-slick_slider-#{Workarea::SlickSlider::VERSION}.gem"
