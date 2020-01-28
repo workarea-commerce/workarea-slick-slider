@@ -9,3 +9,5 @@ Gemfile.lock
 test/dummy/public/system/
 .DS_STORE
 .rubocop-http*
+node_modules/
+yarn.lock
